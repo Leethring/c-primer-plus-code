@@ -1,0 +1,26 @@
+/*************************************************************************
+	> File Name: fgets1.c
+	> Author: 
+	> Mail: 
+	> Created Time: Fri 27 Dec 2019 03:24:24 AM UTC
+ ************************************************************************/
+
+#include<stdio.h>
+#define STLEN 14
+int main(void){
+    char words[STLEN];
+
+    puts("Enter a string input.");
+    fgets(words, STLEN, stdin);
+    printf("Your string twice (puts(), then fputs()): \n");
+    puts(words);
+    fputs(words, stdout);
+    puts("Enter another string, please");
+    fgets(words, STLEN, stdin);
+    printf("Your string twicec (puts(), then fputs()): \n");
+    puts(words);
+    fputs(words, stdout);
+    puts("Done!");
+
+    return 0;
+}
