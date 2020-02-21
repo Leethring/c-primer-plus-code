@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "diceroll.h"
-
-
+extern int roll_count;
+int roll_n_dice(int dice, int sides);
 int main()
 {
     int dice, roll;
@@ -25,6 +24,7 @@ int main()
                 while(getchar() != '\n')
                     continue;
                 printf("How many sides? Enter 0 to stop.\n");
+                continue;
                 
             }
         
